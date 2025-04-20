@@ -24,7 +24,7 @@ langchain
 langchain-community 
 langchain-chroma 
 langchain-huggingface 
-chromadb==0.4.24 # Pinned version for known stability
+chromadb
 sentence-transformers 
 # Audio Handling
 sounddevice 
