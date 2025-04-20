@@ -1,0 +1,17 @@
+{
+    "business_name": "The AI Bistro",
+    "business_type": "restaurant",
+    "general_info": [
+      "We are a modern eatery focused on digitally inspired dishes.",
+      "Hours: Mon-Fri: 11am - 9pm, Sat: 12pm - 10pm, Sun: Closed.",
+      "Reservations can be made via phone (555-FOOD) or our website (mocksite.com).",
+      "Today's special is the 'Code Carbonara' for $15."
+    ],
+    "menu_items": [
+      {"item": "Pixel Pasta", "price": 12.99, "description": "Tagliatelle pasta with a vibrant, pixel-art inspired vegetable medley and a light garlic sauce.", "category": "Main Course", "tags": ["vegetarian option available", "pasta"]},
+      {"item": "Algorithm Burger", "price": 14.50, "description": "A perfectly calculated 1/2 lb beef patty with cheddar, onions, lettuce, and our signature 'logic' sauce on a brioche bun.", "category": "Main Course", "tags": ["beef", "burger"]},
+      {"item": "Data Delight Salad", "price": 10.00, "description": "Fresh mixed greens, cherry tomatoes, cucumbers, and croutons with a structured data vinaigrette.", "category": "Appetizer/Side", "tags": ["vegetarian", "vegan option available", "salad", "healthy"]},
+      {"item": "Bit Brew Coffee", "price": 3.50, "description": "Locally roasted coffee, brewed fresh.", "category": "Beverage", "tags": ["coffee", "hot drink"]},
+      {"item": "Recursive Raspberry Cheesecake", "price": 7.50, "description": "A slice of creamy cheesecake with a swirling raspberry reduction.", "category": "Dessert", "tags": ["dessert", "cheesecake", "sweet"]}
+    ]
+  }

@@ -1,0 +1,34 @@
+llm:
+  provider: llama.cpp
+  model_path: dummy/path/llm.gguf # Doesn't need to exist for these tests
+  n_ctx: 1024
+  n_gpu_layers: 0
+
+rag:
+  embedding_model: dummy-embeddings
+  persist_directory: dummy_db
+  collection_name_base: test_data
+  retrieval_k: 2
+
+stt:
+  provider: whisper.cpp
+  model_name: base.en # Use a name, path not needed for mocked tests
+  language: en
+
+tts:
+  provider: kokoro
+  kokoro:
+    lang_code: 'a'
+    default_voice: 'test_voice'
+
+audio:
+  stt_sample_rate: 16000
+  tts_sample_rate: 24000
+
+memory:
+  persist_file: test_user_memory.json # Will be overridden by fixture
+
+sentiment:
+  model_name: dummy-sentiment-model
+
+active_business_type: restaurant

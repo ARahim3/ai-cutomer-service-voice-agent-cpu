@@ -1,0 +1,44 @@
+# requirements.txt
+
+# Core AI/ML Libraries
+--find-links  https://download.pytorch.org/whl/cpu/torch/
+torch==2.6.0+cpu
+
+transformers==4.51.3 # Pin to version compatible with pipeline usage
+optimum 
+onnxruntime 
+
+# STT (Optimized Whisper Frontend)
+insanely-fast-whisper 
+
+# LLM (Optimized Local Backend)
+llama-cpp-python
+# TTS (Kokoro Frontend)
+kokoro
+
+# VAD
+webrtcvad 
+
+# RAG / Vector Store / Embeddings (LangChain)
+langchain 
+langchain-community 
+langchain-chroma 
+langchain-huggingface 
+chromadb==0.4.24 # Pinned version for known stability
+sentence-transformers 
+# Audio Handling
+sounddevice 
+soundfile 
+numpy 
+scipy
+
+# Configuration & Utilities
+PyYAML 
+python-dotenv 
+tqdm 
+# Document Loaders for Indexer (as needed)
+pypdf 
+jq 
+# Testing (Optional for runtime, needed for development/CI)
+pytest 
+pytest-mock 

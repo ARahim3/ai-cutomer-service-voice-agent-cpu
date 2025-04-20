@@ -1,0 +1,66 @@
+# Configuration for the AI Agent
+# LLM Configuration
+
+llm:
+  provider: llama.cpp  #ollama
+  # model_name: gemma3:1b # Or mistral:7b, gemma:7b etc.
+  model_path: models/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf  # models/qwen2.5-0.5b-instruct-q4_k_m.gguf
+  n_ctx: 2048 # Context size
+  n_gpu_layers: 0 # for cpu
+
+# RAG Configuration
+rag:
+  embedding_model: all-MiniLM-L6-v2
+  persist_directory: chroma_db
+  # Collection name base - _kb_lc suffix is added automatically by indexer/rag_handler
+  # This should match the 'collection_base' used when running index_knowledge.py
+  collection_name_base: business_data
+  retrieval_k: 3 # Number of chunks to retrieve
+
+# STT Configuration
+stt:
+  provider: insanely-fast-whisper  #whisper.cpp
+  model_name: openai/whisper-base.en # tiny.en, small.en etc.
+  # model_path: models/ggml-base.en-q5_1.bin
+  language: en
+  batch_size: 4
+
+# TTS Configuration
+tts:
+  provider: kokoro # or 'coqui' if you switch back
+  # Kokoro specific config
+  kokoro:
+    repo_id: hexgrad/Kokoro-82M # Optional explicit repo ID
+    lang_code: 'a' # Or 'en' if supported
+    # Guessing a default english voice - check kokoro docs/repo for valid voices
+    default_voice: 'af_sky'
+  # Coqui specific config (if used)
+  coqui:
+    model_name: tts_models/multilingual/multi-dataset/xtts_v2
+    # speaker_index: 0 # Default speaker
+    # language_index: 0 # Default language
+
+# Audio Configuration
+audio:
+  # VAD parameters
+  vad_aggressiveness: 2 # 0 (least aggressive) to 3 (most aggressive)
+  vad_frame_ms: 30 # Frame duration for VAD (10, 20, or 30)
+  vad_padding_ms: 300 # Silence padding around speech
+  vad_min_speech_ms: 150 # Minimum duration of speech to trigger
+  vad_max_silence_ms: 1500 # Max silence after speech before stopping
+  # record_duration: 5 # seconds
+  stt_sample_rate: 16000
+  tts_sample_rate: 24000 # Kokoro default
+
+# Memory Configuration
+memory:
+  persist_file: user_memory.json
+
+# Sentiment Analysis Configuration
+sentiment:
+  model_name: distilbert-base-uncased-finetuned-sst-2-english
+
+# Active Business Configuration
+# This determines which skill set and potentially KB subset is loaded
+# Value should match the key in skills.registry (e.g., 'restaurant', 'real_estate')
+active_business_type: restaurant

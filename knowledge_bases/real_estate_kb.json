@@ -1,0 +1,19 @@
+{
+    "business_name": "Future Homes Realty",
+    "business_type": "real estate agency",
+    "general_info": [
+      "We help clients buy and sell properties in the wider metro area.",
+      "Contact us at 555-REALTY or visit our office at 1 Meta Street.",
+      "Our agents are available Mon-Sat, 9am - 6pm."
+    ],
+    "listings": [
+      {"id": "RH001", "address": "123 Binary Lane", "price": 500000, "status": "Available", "beds": 3, "baths": 2, "sqft": 1800, "description": "Charming updated bungalow in a quiet neighborhood. Features hardwood floors and a large backyard.", "tags": ["bungalow", "available", "3 bed", "updated"]},
+      {"id": "RH002", "address": "404 Logic Loop", "price": 750000, "status": "Pending", "beds": 4, "baths": 3, "sqft": 2500, "description": "Spacious modern home with open floor plan, gourmet kitchen, and smart home features. Sale pending.", "tags": ["modern", "pending", "4 bed", "smart home"]},
+      {"id": "RH003", "address": "8 Algorithm Ave", "price": 620000, "status": "Available", "beds": 3, "baths": 2.5, "sqft": 2100, "description": "Two-story contemporary house with high ceilings, large windows, and a two-car garage. Close to tech parks.", "tags": ["contemporary", "available", "3 bed", "garage"]}
+    ],
+    "faqs": [
+      {"q": "How do I schedule a viewing?", "a": "You can schedule a property viewing by calling our main office at 555-REALTY or by contacting the listing agent directly if provided.", "tags": ["viewing", "scheduling", "showing"]},
+      {"q": "Do you help with financing?", "a": "While we don't directly provide loans, we work with several trusted local mortgage brokers and can provide recommendations based on your needs.", "tags": ["financing", "mortgage", "loan", "recommendation"]},
+      {"q": "What areas do you serve?", "a": "We primarily serve the main city and surrounding suburbs, including Downtown, Tech Valley, and Riverside.", "tags": ["area", "location", "suburbs"]}
+    ]
+  }
