@@ -30,4 +30,4 @@ user_memory.json
 ~/.cache/huggingface/
 ~/.cache/torch/
 
-models/*.gguf 
+*.gguf 
