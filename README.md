@@ -65,9 +65,10 @@ Given the project timeline and the complexity of certain requirements, this impl
     pip install -r requirements.txt
     ```
     *(This might take time and require significant disk space).*
-6.  **Download GGUF LLM Model:** Manual download required.
+6.  **Download GGUF LLM Model:** Manual download required. (If you ignored `step 2`)
     *   Download a quantized GGUF model compatible with `llama-cpp-python` (e.g., `Qwen1.5-1.5B-Instruct-Q4_K_M.gguf`, `gemma-2b-it-q4_k_m.gguf`). Search Hugging Face for suitable models.
     *   Place the downloaded `.gguf` file inside the `models/` directory (create the directory if it doesn't exist).
+
 7.  **Configure Model Paths:** Open `src/config.yaml` and ensure `llm.model_path` points to the correct filename of the GGUF model you downloaded inside the `models/` directory. Verify other settings like `stt.model_name` (`openai/whisper-base.en` is a good default).
 8.  **Prepare Knowledge Base:**
     *   Place your knowledge base documents (e.g., `.json`, `.pdf`, `.txt`) inside the `knowledge_bases/` directory. Example files are included.
